@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 // MongoDB connection
-mongoose.connect('mongodb://127.0.0.1:27017/mdsf', {
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => {
@@ -39,11 +39,13 @@ app.use('/api/treks', require('./routes/trekRoutes'));
 app.use('/api/adminnn', require('./routes/adminRoutes'));
 
 // Serve static files
-app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // Handle React routing, return all requests to React app
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+app.get('/', (req, res) => {
+    // res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+    res.json({
+        message: "Hello from lovejeet"
+    })
 });
 
 const PORT = process.env.PORT || 5000;

@@ -20,13 +20,17 @@ function Home() {
     const treksRef = useRef(null);
     const testimonialRef = useRef(null);
 
+    const api = axios.create({
+        baseURL: import.meta.env.VITE_API_URL || ''
+    });
+
     // Scroll function
     const scrollToSection = (ref) => {
         ref.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
     useEffect(() => {
-        axios.get('/api/treks').then((res) => {
+        axios.get(`/api/treks`).then((res) => {
             setTreks(res.data);
             setTopTreks(res.data.filter((trek) => trek.isTopTrek));
         });

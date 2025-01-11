@@ -3,6 +3,11 @@ import axios from 'axios';
 import './AdminPanel.css';
 
 const AdminPanel = () => {
+
+  const api = axios.create({
+    baseURL: import.meta.env.VITE_API_URL || ''
+});
+
   const [treks, setTreks] = useState([]);
   const [formData, setFormData] = useState({
     name: '',
@@ -23,7 +28,7 @@ const AdminPanel = () => {
 
   const fetchTreks = async () => {
     try {
-      const response = await axios.get('/api/treks');
+      const response = await axios.get(`/api/treks`);
       setTreks(response.data);
     } catch (error) {
       console.error('Error fetching treks:', error.message);
@@ -77,7 +82,7 @@ const AdminPanel = () => {
       if (isEditing) {
         await axios.put(`/api/adminnn/treks/${editingTrekId}`, trekData);
       } else {
-        await axios.post('/api/adminnn/treks', trekData);
+        await axios.post(`/api/adminnn/treks`, trekData);
       }
 
       fetchTreks();

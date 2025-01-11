@@ -14,6 +14,10 @@ function TrekDetails() {
     const [trek, setTrek] = useState(null);
     const [showForm, setShowForm] = useState(false);
 
+    const api = axios.create({
+        baseURL: import.meta.env.VITE_API_URL || ''
+    });
+
     useEffect(() => {
         axios.get(`/api/treks/${id}`).then((res) => setTrek(res.data));
     }, [id]);
