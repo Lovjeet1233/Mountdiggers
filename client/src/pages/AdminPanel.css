@@ -1,0 +1,184 @@
+/* AdminPanel.css */
+
+/* General Styling */
+body {
+    background-color: #f1f4f9;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #ffffff, #e6e9f0);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+h1, h2 {
+    font-weight: 700;
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1.2px;
+}
+
+/* Form Styling */
+form {
+    background: linear-gradient(145deg, #f7faff, #dfe6f3);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #1a73e8;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 5px rgba(26, 115, 232, 0.5);
+}
+
+.btn-primary {
+    background: linear-gradient(145deg, #1a73e8, #004bb5);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(145deg, #004bb5, #1a73e8);
+}
+
+.btn-secondary {
+    background: linear-gradient(145deg, #6c757d, #4a5055);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(145deg, #4a5055, #6c757d);
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background: linear-gradient(145deg, #1a73e8, #004bb5);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.table td {
+    text-align: center;
+    padding: 15px;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #555;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f7faff;
+}
+
+.table img {
+    border-radius: 8px;
+    object-fit: cover;
+    width: 100px;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-warning {
+    background: linear-gradient(145deg, #ffc107, #e0a800);
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(145deg, #e0a800, #ffc107);
+}
+
+.btn-danger {
+    background: linear-gradient(145deg, #dc3545, #bd2130);
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(145deg, #bd2130, #dc3545);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}

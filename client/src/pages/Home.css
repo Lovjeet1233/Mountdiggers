@@ -1,0 +1,263 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Top Treks Section */
+.top-treks-section {
+    margin: 80px 0;
+    text-align: center;
+}
+
+.top-treks-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: white;
+}
+
+/* Top Treks List */
+.top-treks-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+}
+
+/* Individual Trek Card */
+.top-trek-card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin-top: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top-trek-card:nth-child(odd) {
+    margin-top: 60px;
+}
+
+.top-trek-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(50%);
+    transition: filter 0.3s;
+}
+
+.top-trek-card:hover img {
+    filter: brightness(80%);
+}
+
+.top-trek-card h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.top-trek-card:hover h3 {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+/* All Treks Section */
+.treks-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 50px;
+}
+
+.trek-card {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    height: 350px;
+    background: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trek-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+}
+
+.trek-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    filter: brightness(70%);
+    transition: filter 0.3s;
+}
+
+.trek-card:hover img {
+    filter: brightness(100%);
+}
+
+.trek-card h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 3px;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.trek-card h3::after {
+    content: ' →';
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+.trek-card p {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+    .treks-list,
+    .top-treks-list {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        padding: 0 15px;
+    }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 484px) {
+    .treks-list,
+    .top-treks-list {
+        grid-template-columns: 1fr;  /* Force single column */
+        padding: 0 10px;
+        gap: 15px;
+    }
+
+    .trek-card,
+    .top-trek-card {
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .top-trek-card:nth-child(odd) {
+        margin-top: 0;  /* Remove offset on mobile */
+    }
+
+    .trek-card h3,
+    .top-trek-card h3 {
+        font-size: 14px;
+        padding: 4px 10px;
+        width: 80%;  /* Limit text width */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .top-treks-section {
+        margin: 20px auto;
+    }
+
+    .top-treks-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+}
+
+/* Add box-sizing to all elements */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* Full Background */
+.home {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.postimg.cc/2SFdRdps/Group.png');
+    color: white;
+}
+
+.full-background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('https://i.postimg.cc/2SFdRdps/Group.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-background .content {
+    text-align: center;
+    backdrop-filter: blur(3px);
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.full-background h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.full-background p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}

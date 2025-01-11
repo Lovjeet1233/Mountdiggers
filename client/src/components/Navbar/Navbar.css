@@ -1,0 +1,229 @@
+/* Base Styles */
+.navbar {
+  font-family: 'Gilroy-SemiBold', sans-serif;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: black;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Brand/Logo */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+  width: auto;
+}
+
+/* Navigation Links */
+.nav-link {
+  color: white !important;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 8px 15px;
+}
+
+.nav-link:hover {
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+.nav-item {
+  margin: 0 5px;
+}
+
+/* Toggle Button */
+.navbar-toggler {
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+/* Contact Button */
+.contact-btn {
+  font-weight: 700;
+  transition: all 0.3s ease;
+  padding: 8px 20px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.contact-btn:hover {
+  background: transparent;
+  color: white;
+}
+
+/* Navbar Collapse */
+.collapse {
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 484px) {
+  .navbar {
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .navbar-brand {
+    margin: 0;
+    padding: 5px 0;
+  }
+
+  .navbar-brand img {
+    max-height: 35px;
+  }
+
+  .navbar-toggler {
+    display: block;
+    order: 2;
+    margin-left: auto;
+  }
+
+  .collapse {
+    display: none;
+    width: 100%;
+    order: 3;
+    padding: 10px 0;
+  }
+
+  .collapse.show {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-item {
+    margin: 2px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .contact-btn {
+    width: 100%;
+    margin: 10px 0 5px;
+    padding: 10px;
+    text-align: center;
+  }
+}
+/* Mobile and Tablet Styles */
+@media screen and (max-width: 992px) {
+  .navbar {
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .navbar-brand {
+    margin: 0;
+    padding: 5px 0;
+  }
+
+  .navbar-brand img {
+    max-height: 35px;
+  }
+
+  .navbar-toggler {
+    display: block;
+    order: 2;
+    margin-left: auto;
+  }
+
+  .collapse {
+    display: none;
+    width: 100%;
+    order: 3;
+    padding: 10px 0;
+  }
+
+  .collapse.show {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-item {
+    margin: 2px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .contact-btn {
+    width: 100%;
+    margin: 10px 0 5px;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+/* Additional styles for very small screens */
+@media screen and (max-width: 484px) {
+  .navbar-brand img {
+    max-height: 30px;
+  }
+}
+/* Animation Keyframes */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility Classes */
+.bg-black {
+  background-color: black !important;
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .navbar {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}

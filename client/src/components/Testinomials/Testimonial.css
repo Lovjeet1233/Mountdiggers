@@ -1,0 +1,154 @@
+/* Container */
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    perspective: 1500px;
+    overflow: hidden;
+  }
+  
+  /* Cards */
+  .testimonial-card {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s, opacity 0.5s, z-index 0.5s;
+  }
+  
+  .testimonial-card.front {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 3;
+  }
+  
+  .testimonial-card.left {
+    transform: translateX(-150px) scale(0.8);
+    opacity: 0.5;
+    z-index: 2;
+  }
+  
+  .testimonial-card.right {
+    transform: translateX(150px) scale(0.8);
+    opacity: 0.5;
+    z-index: 2;
+  }
+  
+  .testimonial-card.hidden {
+    transform: translateX(300px) scale(0.5);
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+  }
+  
+  .flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Front */
+  .card-front {
+    background-color: #000;
+    color: #fff;
+ 
+    
+  }
+  
+  .card-front img {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+  }
+  
+  .college-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: small;
+    margin-top: 0px;
+    color: black;
+    background-color: white;
+    height: 50px;
+    padding-top: 5px;
+    width: 100%;
+    margin-left: 0%;
+  }
+  .college-name p {
+   
+    font-weight: bold;
+    
+   
+  }
+  
+  /* Back */
+  .card-back {
+    background-color: #000;
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .testimonial-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Flip Arrow (Visible only on mobile) */
+  .flip-arrow {
+    display: none;
+    position: absolute;
+    top: 10px; /* Adjusted to move it to the top */
+    right: 10px; /* Adjusted to position it on the right */
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    transform: rotate(45deg); /* Makes the arrow slanted */
+  }
+  
+  .flip-arrow:hover {
+    color: #00f;
+  }
+  
+  /* Responsive Styling */
+  @media screen and (max-width: 768px) {
+    .testimonial-card.front {
+      transform: translateX(0) scale(1);
+    }
+  
+    .testimonial-card.left,
+    .testimonial-card.right {
+      transform: translateX(-200px) scale(0.8);
+      opacity: 0.5;
+    }
+  
+    .flip-arrow {
+      display: block;
+    }
+  
+    .card-inner:hover {
+      cursor: default;
+    }
+  }
+  

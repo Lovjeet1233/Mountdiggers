@@ -1,0 +1,166 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://i.postimg.cc/2SFdRdps/Group.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Gilroy-Bold', sans-serif;
+  color: #ffffff;
+}
+
+/* Reset container backgrounds */
+.contact-container,
+.contact-card,
+form {
+  background: transparent !important; /* Ensure no background color */
+  box-shadow: none; /* Remove shadow if applied elsewhere */
+}
+
+/* Container Styling */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Card Styling */
+.contact-card {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Header Styling */
+.contact-header {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.contact-subheader {
+  font-size: 16px;
+  color: #cccccc;
+  margin-bottom: 30px;
+}
+
+/* Form Styling */
+form {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.custom-input {
+  flex: 1 1 calc(50% - 10px);
+  padding: 15px;
+  background: rgba(30, 30, 30, 0.8); /* Matches card transparency */
+  border: 1px solid #444;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+}
+
+.custom-input::placeholder {
+  color: #888;
+}
+
+.custom-textarea {
+  width: 100%;
+  padding: 15px;
+  background: rgba(30, 30, 30, 0.8); /* Matches card transparency */
+  border: 1px solid #444;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  resize: none;
+}
+
+.custom-textarea::placeholder {
+  color: #888;
+}
+
+/* Button Styling */
+.submit-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+}
+
+.submit-btn:hover {
+  background: #cccccc;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-card {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .form-group {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-input {
+    flex: 1 1 100%;
+  }
+
+  .contact-header {
+    font-size: 28px;
+  }
+
+  .contact-subheader {
+    font-size: 14px;
+  }
+
+  .custom-textarea {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-header {
+    font-size: 24px;
+  }
+
+  .contact-subheader {
+    font-size: 12px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .custom-input,
+  .custom-textarea {
+    font-size: 14px;
+    padding: 12px;
+    width: 100%;
+  }
+}

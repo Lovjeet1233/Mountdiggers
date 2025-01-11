@@ -1,0 +1,30 @@
+/* GalleryPage.css */
+.gallery-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px;
+    aspect-ratio: 1;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-image-wrapper:hover .gallery-image {
+    transform: scale(1.2);
+  }
+  
+  @media (hover: none) and (pointer: coarse) {
+    .gallery-image-wrapper:active .gallery-image {
+      transform: scale(1.2);
+    }
+  }
+  
+  .gallery-page {
+    padding: 20px 0;
+  }
+  .container {
+    background: transparent;
+  }
