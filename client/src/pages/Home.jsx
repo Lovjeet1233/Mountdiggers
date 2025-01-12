@@ -30,7 +30,7 @@ function Home() {
     };
 
     useEffect(() => {
-        axios.get(`/api/treks`).then((res) => {
+        api.get(`/api/treks`).then((res) => {
             setTreks(res.data);
             setTopTreks(res.data.filter((trek) => trek.isTopTrek));
         });

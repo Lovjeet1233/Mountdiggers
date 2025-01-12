@@ -19,7 +19,7 @@ function TrekDetails() {
     });
 
     useEffect(() => {
-        axios.get(`/api/treks/${id}`).then((res) => setTrek(res.data));
+        api.get(`/api/treks/${id}`).then((res) => setTrek(res.data));
     }, [id]);
 
     if (!trek) return <div>Loading...</div>;

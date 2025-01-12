@@ -4,6 +4,7 @@ import './AdminPanel.css';
 
 const AdminPanel = () => {
 
+  console.log(import.meta.env.VITE_API_URL)
   const api = axios.create({
     baseURL: import.meta.env.VITE_API_URL || ''
 });
@@ -28,7 +29,7 @@ const AdminPanel = () => {
 
   const fetchTreks = async () => {
     try {
-      const response = await axios.get(`/api/treks`);
+      const response = await api.get(`/api/treks`);
       setTreks(response.data);
     } catch (error) {
       console.error('Error fetching treks:', error.message);
@@ -80,9 +81,9 @@ const AdminPanel = () => {
       console.log('Submitting trek data:', trekData); // Debug log
 
       if (isEditing) {
-        await axios.put(`/api/adminnn/treks/${editingTrekId}`, trekData);
+        await api.put(`/api/adminnn/treks/${editingTrekId}`, trekData);
       } else {
-        await axios.post(`/api/adminnn/treks`, trekData);
+        await api.post(`/api/adminnn/treks`, trekData);
       }
 
       fetchTreks();
@@ -118,7 +119,7 @@ const AdminPanel = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/adminnn/treks/${id}`);
+      await api.delete(`/api/adminnn/treks/${id}`);
       fetchTreks();
     } catch (error) {
       console.error('Error deleting trek:', error.message);
@@ -218,7 +219,7 @@ const AdminPanel = () => {
             </button>
           </div>
           <ul>
-            {formData.itinerary.map((step, index) => (
+            {formData?.itinerary.map((step, index) => (
               <li key={index}>
                 Day {step.day}: {step.activity}{' '}
                 <button
