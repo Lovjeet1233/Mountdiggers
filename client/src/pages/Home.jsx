@@ -97,17 +97,13 @@ function Home() {
         <Mid1 />
       </div>
 
-      <ContactUs />
-
-      {/* Add ref to Testimonial section */}
       <div ref={testimonialRef}>
         <Testimonial />
       </div>
-
       <Gallery />
 
       {/* Add ref to Treks section */}
-      <div ref={treksRef}>
+      {/* <div ref={treksRef}>
         <h2>All Treks</h2>
         <div className="treks-list">
           {treks.map((trek) => (
@@ -121,8 +117,8 @@ function Home() {
             </Link>
           ))}
         </div>
-      </div>
-
+      </div> */}
+      <ContactUs />
       <Footer />
     </div>
   );
