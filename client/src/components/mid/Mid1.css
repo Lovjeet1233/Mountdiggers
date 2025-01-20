@@ -1,126 +1,115 @@
 .mid1-section {
-    position: relative;
-    background-image: url('https://i.postimg.cc/Z5Mbq2hp/chen-gang-n-RIDvq-LJsu-U-unsplash-2.png'); /* Background Image */
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center content horizontally and vertically */
-    overflow: hidden;
-    font-family: "TT Norms Pro", sans-serif; /* Font family for the entire section */
-}
-
-.mid1-overlay {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    color: white;
-    text-align: center; /* Align text center */
-    padding: 20px; /* Add padding for better spacing */
+  position: relative;
+  background-image: url("bgImg2.png"); /* Background Image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  padding-left: 40px;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Roboto"; /* Font family for the entire section */
 }
 
 .mid1-content {
-    max-width: 800px;
-    padding: 20px;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .mid1-content h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    line-height: 1.2;
-    color: white; /* Heading color */
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  font-family: "Roboto";
+  color: white; /* Heading color */
 }
 
 .mid1-content p {
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .mid1-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
-    justify-content: center; /* Center buttons */
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  justify-content: center; /* Center buttons */
 }
 
 .mid1-btn {
-    width: 154px; /* Fixed width */
-    height: 43px; /* Fixed height */
-    padding: 10px 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    flex: 1;
-    max-width: 150px;
-    text-align: center;
+  width: 154px; /* Fixed width */
+  height: 43px; /* Fixed height */
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  flex: 1;
+  max-width: 150px;
+  text-align: center;
 }
 
 .mid1-btn.primary {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .mid1-btn.primary:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .mid1-btn.secondary {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
 }
 
 .mid1-btn.secondary:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .mid1-content h2 {
-        font-size: 2rem;
-    }
+  .mid1-content h2 {
+    font-size: 2rem;
+  }
 
-    .mid1-content p {
-        font-size: 0.9rem;
-    }
+  .mid1-content p {
+    font-size: 0.9rem;
+  }
 
-    .mid1-buttons {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
+  .mid1-buttons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
-    .mid1-content h2 {
-        font-size: 1.8rem;
-    }
+  .mid1-content h2 {
+    font-size: 1.8rem;
+  }
 
-    .mid1-content p {
-        font-size: 0.8rem;
-    }
+  .mid1-content p {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 320px) {
-    .mid1-content h2 {
-        font-size: 1.5rem;
-    }
+  .mid1-content h2 {
+    font-size: 1.5rem;
+  }
 
-    .mid1-content p {
-        font-size: 0.7rem;
-    }
+  .mid1-content p {
+    font-size: 0.7rem;
+  }
 }
