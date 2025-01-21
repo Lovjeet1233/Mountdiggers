@@ -8,6 +8,7 @@ import RegistrationForm from "./components/RegistrationForm";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Terms from "./components/Terms";
 function App() {
+  
   return (
     <Router>
       <Routes>
