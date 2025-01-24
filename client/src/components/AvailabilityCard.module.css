@@ -1,0 +1,161 @@
+.card {
+  width: 100%;
+  max-width: 400px;
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 24px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.legend {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.statusDot.available {
+  background-color: #52c41a;
+}
+
+.statusDot.fillingFast {
+  background-color: #faad14;
+}
+
+.statusDot.booked {
+  background-color: #f5222d;
+}
+
+.monthsContainer {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.monthButton {
+  border: 1px solid #434343;
+  background: transparent;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.monthButton:hover {
+  border-color: white;
+}
+
+.batchesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.batchCard {
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.batchCard.available {
+  background: rgba(82, 196, 26, 0.1);
+}
+
+.batchCard.fillingFast {
+  background: rgba(250, 173, 20, 0.1);
+}
+
+.batchCard.booked {
+  background: rgba(245, 34, 45, 0.1);
+}
+
+.batchHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.batchNumber {
+  font-weight: 500;
+}
+
+.batchDates {
+  font-size: 14px;
+  color: #d9d9d9;
+}
+
+.locationCard {
+  background: #141414;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.locationInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.duration {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.route {
+  color: #d9d9d9;
+}
+
+.priceInfo {
+  text-align: right;
+}
+
+.priceLabel {
+  font-size: 14px;
+  color: #d9d9d9;
+}
+
+.price {
+  font-weight: 500;
+}
+
+.bookButton {
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: 12px;
+  color: #d9d9d9;
+}
